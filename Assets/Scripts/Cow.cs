@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//INHERITANCE
 public class Cow : Animal
 {
     public Transform[] waypoints;
@@ -31,6 +32,7 @@ public class Cow : Animal
         cowRb.AddRelativeForce(Vector3.forward * speed, ForceMode.Impulse);
     }
 
+    //ABSTRACTION
     private void MoveCow()
     {
         distance = Vector3.Distance(transform.position, waypoints[waypointIndex].position);

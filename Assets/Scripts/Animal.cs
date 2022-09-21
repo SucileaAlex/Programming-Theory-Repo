@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Animal : MonoBehaviour
 {
  
-    
+    //POLYMORPHISM
     protected abstract void Move(int speed);
 
      protected virtual void IncreaseIndex(int waypointIndex , Transform[] waypoints)
