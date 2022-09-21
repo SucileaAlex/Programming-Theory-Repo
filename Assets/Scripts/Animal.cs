@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animal : MonoBehaviour
+public abstract class Animal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+ 
+    
+    protected abstract void Move(int speed);
+
+     protected virtual void IncreaseIndex(int waypointIndex , Transform[] waypoints)
     {
-        
+        waypointIndex++;
+        if (waypointIndex >= waypoints.Length)
+        {
+            waypointIndex = 0;
+        }
+        transform.LookAt(waypoints[waypointIndex].position);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    protected virtual void Move()
-    {
-
-    }
 }
